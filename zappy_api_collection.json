@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "4e2c2fd2-9177-4e5f-ace1-9c7f62ff3668",
+		"name": "zappy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurllocalhost}}/products",
+							"host": [
+								"{{baseurllocalhost}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWUxMjMiLCJyb2xlIjoiY2xpZW50IiwiaWQiOjEsImlhdCI6MTY3ODAyMTIwMn0.fmieIQxPqdGEc5eqibT-FdIq44q1IvCQ9XDufwzgOCI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"new product\",\r\n    \"price\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurllocalhost}}/products",
+							"host": [
+								"{{baseurllocalhost}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurllocalhost}}/products/5",
+							"host": [
+								"{{baseurllocalhost}}"
+							],
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWUxMjMiLCJyb2xlIjoiYWRtaW4iLCJpZCI6MSwiaWF0IjoxNjc4MDE4NTIxfQ.wGbm7VQ_AR8S4e8wMic4qhvZ3Eye6s9FrLaSWNRS1W0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"name_edited123\",\r\n    \"price\": 45000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurllocalhost}}/products/6",
+							"host": [
+								"{{baseurllocalhost}}"
+							],
+							"path": [
+								"products",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbWUxMjMiLCJyb2xlIjoiYWRtaW4iLCJpZCI6MSwiaWF0IjoxNjc4MDIwMTg0fQ.3UREhUEFbBK4ZshiFQT6O7qyu9PegB5sLy7wr_N1NMM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseurllocalhost}}/products/5",
+							"host": [
+								"{{baseurllocalhost}}"
+							],
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"name12345\",\r\n    \"password\": \"password12345\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurllocalhost}}/users/create",
+							"host": [
+								"{{baseurllocalhost}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"name12345\",\r\n    \"password\": \"password12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurllocalhost}}/users/login",
+							"host": [
+								"{{baseurllocalhost}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "/logs/create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
